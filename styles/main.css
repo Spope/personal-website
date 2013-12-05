@@ -454,6 +454,9 @@ lesshat-selector {
     }
 }
 */
+#portfolio-content {
+  padding-bottom: 120px;
+}
 #portfolio-content ul {
   text-align: center;
   width: 100%;

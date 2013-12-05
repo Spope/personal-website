@@ -51,10 +51,9 @@ $portfolios = array(
     )
 );
 
-
-require "views/header.php";
-require "views/squares.php";
-require "views/portfolio.php";
-require "views/contact.php";
-require "views/footer.php";
+include "views/header.php";
+include "views/squares.php";
+include "views/portfolio.php";
+include "views/contact.php";
+include "views/footer.php";
 ?>

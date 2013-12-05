@@ -14,7 +14,7 @@
                     <?php echo $val['description'];?>
                 </div>
             </li>
-        <?
+        <?php
         }
         ?>
         </ul>
