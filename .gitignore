@@ -1,0 +1,7 @@
+node_modules
+temp
+.tmp
+*.swp
+dist
+.sass-cache
+package
