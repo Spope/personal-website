@@ -73,9 +73,4 @@ $portfolios = array(
     )
 );
 */
-//include "views/header.php";
-//include "views/squares.php";
-//include "views/portfolio.php";
-//include "views/contact.php";
-//include "views/footer.php";
 ?>
