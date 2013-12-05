@@ -7,7 +7,7 @@ module.exports = function(grunt) {
                     //paths: ["../client/public/less"]
                 },
                 files: {
-                    "web/public/styles/main.css" : "less/main.less"
+                    "web/public/styles/main.css" : "web/public/less/main.less"
                 }
             }
         },
