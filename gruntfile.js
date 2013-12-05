@@ -7,7 +7,7 @@ module.exports = function(grunt) {
                     //paths: ["../client/public/less"]
                 },
                 files: {
-                    "styles/main.css" : "less/main.less"
+                    "web/public/styles/main.css" : "less/main.less"
                 }
             }
         },
@@ -23,7 +23,7 @@ module.exports = function(grunt) {
                 options: {
                     livereload: true
                 },
-                files: ["styles/main.css"]
+                files: ["web/public/styles/main.css"]
             }
         },
     });
