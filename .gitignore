@@ -4,4 +4,5 @@ temp
 *.swp
 dist
 .sass-cache
+vendor/*
 package
