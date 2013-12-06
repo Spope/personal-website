@@ -16,9 +16,9 @@ $app->get('/', function () use ($app) {
 
 $app->post('/contact', function(Request $request) use ($app) {
 
-    $name = utf8_decode($request->get('name'));
+    $name = $request->get('name');
     $email = $request->get('email');
-    $message = nl2br(utf8_decode($request->get('message')));
+    $message = nl2br($request->get('message'));
 
     if(filter_var($email, FILTER_VALIDATE_EMAIL) && $message != "" && $name != "") {
 
@@ -34,7 +34,7 @@ $app->post('/contact', function(Request $request) use ($app) {
         $db->insert('contact', $contact);
 
         if(!$app['debug']){
-            $mail = 'Nom : '.$name.'<br />E-mail : '.$email.'<br /><br />'.$message;
+            $mail = utf8_decode('Nom : '.$name.'<br />E-mail : '.$email.'<br /><br />'.$message);
             mail('pinaudt@gmail.com', 'Spope contact', $mail, 'Content-type: text/html; charset=utf-8');
         }
 
