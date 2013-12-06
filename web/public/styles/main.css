@@ -113,7 +113,8 @@ hr {
 }
 input[type="text"],
 input[type="password"],
-input[type="email"] {
+input[type="email"],
+textarea {
   display: block;
   font-weight: 300;
   border: solid 1px #bebebe;
@@ -147,7 +148,7 @@ button {
 .pointer {
   cursor: pointer;
 }
-.hide {
+.hidden {
   display: none;
 }
 html,
@@ -490,12 +491,27 @@ lesshat-selector {
   width: 354px;
   border: 1px solid lightgray;
 }
+#contact-form input#input-name {
+  border-bottom: none;
+}
+#contact-form input.error {
+  border-color: red;
+}
 #contact-form textarea {
-  width: 100%;
+  width: 354px;
   border: 1px solid lightgray;
-  height: 190px;
+  height: 150px;
   resize: none;
+  border-top: none;
+}
+#contact-form textarea.error {
+  border-color: red;
 }
 #contact-form button {
   width: 362px;
+}
+#contact-form #thanks h3 {
+  font-size: 2em;
+  text-align: center;
+  margin-top: 100px;
 }

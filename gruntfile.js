@@ -13,7 +13,7 @@ module.exports = function(grunt) {
         },
         watch: {
             less: {
-                files: "less/*.less",
+                files: "web/public/less/*.less",
                 tasks: ["less"],
                 options: {
                     interrupt: true
@@ -26,11 +26,24 @@ module.exports = function(grunt) {
                 files: ["web/public/styles/main.css"]
             }
         },
+        uglify: {
+            options: {
+                mangle: true
+            },
+            my_target: {
+                files: {
+                    'web/public/js/build/main.min.js': ['web/public/js/lib/squares.js', 'web/public/js/lib/sizes.js', 'web/public/js/lib/contact.js'],
+                }
+            }
+        }
     });
 
 
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
 
     grunt.registerTask('default', ['less', 'watch']);
+    grunt.registerTask('compile', ['uglify']);
+    
 };

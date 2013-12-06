@@ -14,14 +14,32 @@
     input{
         width:354px;
         border:1px solid lightgray;
+        &#input-name{
+            border-bottom:none;
+        }
+        &.error{
+            border-color:red;
+        }
     }
     textarea{
-        width:100%;
+        width:354px;
         border:1px solid lightgray;
-        height:190px;
+        height:150px;
         resize:none;
+        &.error{
+            border-color:red;
+        }
+        border-top:none;
     }
     button{
         width:362px;
+    }
+
+    #thanks{
+        h3{
+            font-size:2em;
+            text-align:center;
+            margin-top:100px;
+        }
     }
 }

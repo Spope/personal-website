@@ -2,9 +2,10 @@
 <html>
     <head>
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700' rel='stylesheet' type='text/css'>
-        <link href="public/styles/main.css" rel="stylesheet" media="screen">
-
-        
+        <link href="{{ app.request.basepath }}/public/styles/main.css" rel="stylesheet" media="screen">
+        <script type="text/javascript">
+            var postContact = "{{ app.url_generator.generate('post_contact') }}";
+        </script>
     </head>
     <body>
 
@@ -18,9 +19,14 @@
             <div id="footer"></div>
         </div>
 
-        <script src="public/js/squares.js"></script>
-        <script src="public/js/sizes.js"></script>
+        {% if app.debug %}
+            <script src="{{ app.request.basepath }}/public/js/lib/squares.js"></script>
+            <script src="{{ app.request.basepath }}/public/js/lib/sizes.js"></script>
+            <script src="{{ app.request.basepath }}/public/js/lib/contact.js"></script>
 
-        <script src="http://devserver2.com:35729/livereload.js"></script>
+            <script src="http://devserver2.com:35729/livereload.js"></script>
+        {% else %}
+            <script src="{{ app.request.basepath }}/public/js/build/main.min.js"></script>
+        {%endif %}
     </body>
 </html>

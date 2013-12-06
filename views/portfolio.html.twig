@@ -2,23 +2,17 @@
     <div class="pad">
         <h1>Portfolio</h1>
         <div id="portfolio-content">
-        
+
         <ul>
-        {#
-        <?php
-        foreach($portfolios as $k=>$val){
-        ?>
+        {% for portfolio in portfolios %}
             <li class="portfolio">
-                <h2><?php echo $val['title']; ?></h2>
-                <div class="preview"><img src="img/portfolio/<?php echo $val['img'];?>" alt="" width="230" /></div>
+                <h2>{{ portfolio['title'] }}</h2>
+                <div class="preview"><img src="{{ app.request.basepath }}/public/img/portfolio/{{ portfolio['img'] }}" alt="" width="230" /></div>
                 <div class="description">
-                    <?php echo $val['description'];?>
+                    {{ portfolio['description'] }}
                 </div>
             </li>
-        <?php
-        }
-        ?>
-        #}
+        {% endfor %}
         </ul>
         <div class="clr"></div>
         </div>
