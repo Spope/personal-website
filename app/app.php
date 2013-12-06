@@ -5,7 +5,6 @@ require_once __DIR__.'/bootstrap.php';
 
 $app->get('/', function () use ($app) {
     
-
     return $app['twig']->render('home.html.twig', array(
         'portfolios' => getPortfolios($app),
         'contacted'  => false
@@ -17,7 +16,7 @@ $app->get('/', function () use ($app) {
 
 $app->post('/contact', function(Request $request) use ($app) {
 
-    $name = $request->get('name');
+    $name = utf8_decode($request->get('name'));
     $email = $request->get('email');
     $message = nl2br(utf8_decode($request->get('message')));
 
@@ -69,7 +68,7 @@ $app->post('/contact', function(Request $request) use ($app) {
 function getPortfolios($app){
 
     $db = $app['db'];
-    $sql = "SELECT * FROM portfolio ORDER BY date ASC";
+    $sql = "SELECT * FROM portfolio ORDER BY date DESC";
 
     return $app['db']->fetchAll($sql);
 }

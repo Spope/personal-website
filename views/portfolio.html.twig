@@ -6,7 +6,7 @@
         <ul>
         {% for portfolio in portfolios %}
             <li class="portfolio">
-                <h2>{{ portfolio['title'] }}</h2>
+                <h2>{{ portfolio['title']|e }}</h2>
                 <div class="preview"><img src="{{ app.request.basepath }}/public/img/portfolio/{{ portfolio['img'] }}" alt="" width="230" /></div>
                 <div class="description">
                     {{ portfolio['description'] }}
