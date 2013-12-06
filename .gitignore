@@ -7,3 +7,5 @@ dist
 vendor/*
 package
 composer.phar
+app/config/config.php
+app/config/config_dev.php
