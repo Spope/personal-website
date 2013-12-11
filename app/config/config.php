@@ -8,8 +8,6 @@ return array(
         'user'       => 'thomas.devserver',
         'password'   => 'popo',
         'charset'    => 'utf8'
-    ),
-
-    'debug' => false
+    )
 
 );

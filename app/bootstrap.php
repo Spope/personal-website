@@ -1,15 +1,10 @@
 <?php
-
 require_once __DIR__.'/../vendor/autoload.php';
 
-if($dev){
-    $config = require_once __DIR__.'/config/config_dev.php';
-}else{
-    $config = require_once __DIR__.'/config/config.php';
-}
+$config = require_once __DIR__.'/config/config.php';
 
 $app = new Silex\Application();
-$app['debug'] = $config['debug'];
+$app['debug'] = DEBUG;
 
 
 /**

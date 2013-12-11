@@ -8,8 +8,5 @@ return array(
         'user'       => '',
         'password'   => '',
         'charset'    => 'utf8'
-    ),
-
-    'debug' => false
-
+    )
 );
