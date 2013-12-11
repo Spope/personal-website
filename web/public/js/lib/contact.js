@@ -1,60 +1,74 @@
- var xhr = function(options){
+var Contact = {
 
-    options.body = options.body || '';
-    options.method = options.method || 'GET';
-    options.requestHeader = options.requestHeader || 'application/json';
-    if(!options.url)throw Error('XHR need a URL');
+    name: {},
+    email: {},
+    message: {},
+    postUrl : '',
 
-    var xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function(event) {
-        if (xhr.readyState == 4) {
+    init: function(){
 
-            if(xhr.status == 201) {
-                if(options.callback){
-                    options.callback(JSON.parse(xhr.responseText));
+        this.name = document.querySelector('#input-name');
+        this.email = document.querySelector('#input-email');
+        this.message = document.querySelector('#input-message');
+        this.postUrl = document.querySelector('#form-contact').action;
+
+        document.querySelector('#form-contact').addEventListener('submit', function(e){
+            e.preventDefault();
+            this.submit();
+
+            return false;
+
+        }.bind(this));
+    },
+
+    submit: function(){
+
+        var options = {
+            url: this.postUrl,
+            method: 'post',
+            body: 'name='+this.name.value+'&email='+this.email.value+'&message='+this.message.value,
+            requestHeader: 'application/x-www-form-urlencoded',
+            error: function(text) {
+                this.name.className = 'error';
+                this.email.className = 'error';
+                this.message.className = 'error';
+            },
+            callback: function(response){
+
+                if(response.response) {
+                    document.querySelector('#form-contact').style.display = 'none';
+                    document.querySelector('#thanks').style.display = 'block';
                 }
-                return;
-            } else {
-                    options.error(JSON.parse(xhr.responseText));
             }
         }
-    };
-    xhr.open(options.method, options.url, true);
-    xhr.setRequestHeader('Content-Type', options.requestHeader);
-    xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
-    xhr.send(options.body);
-}
 
-document.querySelector('#form-contact').addEventListener('submit', function(e){
+        this.xhr(options);
+    },
 
-    e.preventDefault();
-    submit();
-    return false;
-});
+    xhr: function(options){
 
-var submit = function(){
-    var name = document.querySelector('#input-name').value;
-    var email = document.querySelector('#input-email').value;
-    var message = document.querySelector('#input-message').value;
+        options.body = options.body || '';
+        options.method = options.method || 'GET';
+        options.requestHeader = options.requestHeader || 'application/json';
+        if(!options.url)throw Error('XHR need a URL');
 
-    var options = {
-        url: postContact,
-        method: 'post',
-        body: 'name='+name+'&email='+email+'&message='+message,
-        requestHeader: 'application/x-www-form-urlencoded',
-        error: function(text) {
-            document.querySelector('#input-name').className = 'error';
-            document.querySelector('#input-email').className = 'error';
-            document.querySelector('#input-message').className = 'error';
-        },
-        callback: function(response){
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function(event) {
+            if (xhr.readyState == 4) {
 
-            if(response.response) {
-                document.querySelector('#form-contact').style.display = 'none';
-                document.querySelector('#thanks').style.display = 'block';
+                if(xhr.status == 201) {
+                    if(options.callback){
+                        options.callback(JSON.parse(xhr.responseText));
+                    }
+                    return;
+                } else {
+                        options.error(JSON.parse(xhr.responseText));
+                }
             }
-        }
+        };
+        xhr.open(options.method, options.url, true);
+        xhr.setRequestHeader('Content-Type', options.requestHeader);
+        xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+        xhr.send(options.body);
     }
-
-    xhr(options);
 }

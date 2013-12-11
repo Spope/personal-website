@@ -32,12 +32,11 @@ module.exports = function(grunt) {
             },
             my_target: {
                 files: {
-                    'web/public/js/build/main.min.js': ['web/public/js/lib/squares.js', 'web/public/js/lib/sizes.js', 'web/public/js/lib/contact.js'],
+                    'web/public/js/build/main.min.js': ['web/public/js/lib/squares.js', 'web/public/js/lib/sizes.js', 'web/public/js/lib/contact.js', 'web/public/js/lib/init.js'],
                 }
             }
         }
     });
-
 
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-watch');

@@ -1,22 +1,33 @@
-var resize = function(){
+var Size = {
 
-    var header = document.querySelector('#header');
-    var squares = document.querySelector('#squares');
-    var portfolio = document.querySelector('#portfolios');
-    var contact = document.querySelector('#contact');
+    header: {},
+    squares: {},
+    portfolio: {},
+    contact: {},
 
-    var headerH = header.offsetHeight;
-    var squaresH = squares.offsetHeight;
-    var portfolioH = portfolio.offsetHeight;
+    init: function(){
+        this.header = document.querySelector('#header'),
+        this.squares = document.querySelector('#squares'),
+        this.portfolio = document.querySelector('#portfolios'),
+        this.contact = document.querySelector('#contact'),
 
-    portfolio.style.top = (headerH+squaresH)+"px";
-    contact.style.top = (headerH+squaresH+portfolioH)+"px";
-}
+        window.onload = function(){
+            this.resize();
+        }.bind(this);
 
-window.onload = function(){
-    resize();
-}
+        window.onresize = function(){
+            this.resize();
+        }.bind(this);
+    },
 
-window.onresize = function(){
-    resize();
+    resize: function(){
+
+        var headerH = this.header.offsetHeight;
+        var squaresH = this.squares.offsetHeight;
+        var portfolioH = this.portfolio.offsetHeight;
+
+        this.portfolio.style.top = (headerH+squaresH)+"px";
+        this.contact.style.top = (headerH+squaresH+portfolioH)+"px";
+    }
+ 
 }
