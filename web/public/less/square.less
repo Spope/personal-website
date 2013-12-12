@@ -116,8 +116,10 @@
 
 
 .square1{
+    
     top:0;
     left:0;
+    .animation(positionF @square-position-duration);
     .cover{
         background-image:url('../img/square.png');
         background-position:0px 0px;
@@ -129,6 +131,7 @@
 .square2{
     top:0;
     left:270px;
+    .animation(positionS @square-position-duration);
     .cover{
         background-image:url('../img/square.png');
         background-position:-270px 0px;
@@ -139,6 +142,7 @@
 .square3{
     top:270px;
     left:135px;
+    .animation(positionT @square-position-duration);
     .cover{
         background-image:url('../img/square.png');
         background-position:-80px -160px;
@@ -148,6 +152,11 @@
         margin-top:60px;
     }
 }
+
+.keyframes(~'positionF, from{top:-800px;left:-800px;}to{top:0px;left:0px}');
+.keyframes(~'positionS, from{top:-800px;left:1070px}to{top:0px;left:270px}');
+.keyframes(~'positionT, from{top:1070px;}to{top:270px;}');
+
 .keyframes(~'slideF, 0%, 100%{background-position:0px 0px;}25%{background-position:-1160px 0px;}50%{background-position:-1160px -520px;}75%{background-position:0px -520px;}');
 
 .keyframes(~'slideS, 0%, 100%{background-position:-270px 0px;}25%{background-position:-1430px 0px;}50%{background-position:-1430px -520px;}75%{background-position:-270px -520px;}');

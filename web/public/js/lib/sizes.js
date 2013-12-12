@@ -18,6 +18,8 @@ var Size = {
         window.onresize = function(){
             this.resize();
         }.bind(this);
+
+        this.resize();
     },
 
     resize: function(){

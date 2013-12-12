@@ -155,6 +155,8 @@ html,
 body {
   width: 100%;
   height: 100%;
+  min-width: 540px;
+  min-height: 540px;
 }
 #header {
   height: 50px;
@@ -162,6 +164,8 @@ body {
 #main {
   width: 100%;
   height: 100%;
+  min-width: 540px;
+  min-height: 540px;
 }
 section {
   position: absolute;
@@ -353,6 +357,10 @@ section > .pad > h1 {
 .square1 {
   top: 0;
   left: 0;
+  -webkit-animation: positionF 0.5s;
+  -moz-animation: positionF 0.5s;
+  -o-animation: positionF 0.5s;
+  animation: positionF 0.5s;
 }
 .square1 .cover {
   background-image: url('../img/square.png');
@@ -365,6 +373,10 @@ section > .pad > h1 {
 .square2 {
   top: 0;
   left: 270px;
+  -webkit-animation: positionS 0.5s;
+  -moz-animation: positionS 0.5s;
+  -o-animation: positionS 0.5s;
+  animation: positionS 0.5s;
 }
 .square2 .cover {
   background-image: url('../img/square.png');
@@ -377,6 +389,10 @@ section > .pad > h1 {
 .square3 {
   top: 270px;
   left: 135px;
+  -webkit-animation: positionT 0.5s;
+  -moz-animation: positionT 0.5s;
+  -o-animation: positionT 0.5s;
+  animation: positionT 0.5s;
 }
 .square3 .cover {
   background-image: url('../img/square.png');
@@ -388,6 +404,27 @@ section > .pad > h1 {
 }
 .square3 .content > ul {
   margin-top: 60px;
+}
+lesshat-selector {
+  -lh-property: 0; } 
+@-webkit-keyframes positionF{ from{top:-800px;left:-800px;}to{top:0px;left:0px}}
+@-moz-keyframes positionF{ from{top:-800px;left:-800px;}to{top:0px;left:0px}}
+@-o-keyframes positionF{ from{top:-800px;left:-800px;}to{top:0px;left:0px}}
+@keyframes positionF{ from{top:-800pxleft:-800px}to{top:0pxleft:0px};
+}
+lesshat-selector {
+  -lh-property: 0; } 
+@-webkit-keyframes positionS{ from{top:-800px;left:1070px}to{top:0px;left:270px}}
+@-moz-keyframes positionS{ from{top:-800px;left:1070px}to{top:0px;left:270px}}
+@-o-keyframes positionS{ from{top:-800px;left:1070px}to{top:0px;left:270px}}
+@keyframes positionS{ from{top:-800pxleft:1070px}to{top:0pxleft:270px};
+}
+lesshat-selector {
+  -lh-property: 0; } 
+@-webkit-keyframes positionT{ from{top:1070px;}to{top:270px;}}
+@-moz-keyframes positionT{ from{top:1070px;}to{top:270px;}}
+@-o-keyframes positionT{ from{top:1070px;}to{top:270px;}}
+@keyframes positionT{ from{top:1070px}to{top:270px};
 }
 lesshat-selector {
   -lh-property: 0; } 

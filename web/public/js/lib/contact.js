@@ -32,7 +32,7 @@ var Contact = {
                 this.name.className = 'error';
                 this.email.className = 'error';
                 this.message.className = 'error';
-            },
+            }.bind(this),
             callback: function(response){
 
                 if(response.response) {
