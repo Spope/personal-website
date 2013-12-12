@@ -133,7 +133,7 @@ button {
   cursor: pointer;
 }
 button:hover {
-  background-color: #5a5a5a;
+  background-color: #434343;
 }
 a,
 button {
@@ -520,9 +520,17 @@ lesshat-selector {
   left: 50%;
   margin: -150px 0 0 -200px;
   background: #111111;
+  -webkit-box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.4);
 }
 #contact-form #pad {
   padding: 20px;
+}
+#contact-form .div-form-contact {
+  -webkit-box-shadow: 0px 0px 7px #000000;
+  -moz-box-shadow: 0px 0px 7px #000000;
+  box-shadow: 0px 0px 7px #000000;
 }
 #contact-form input {
   width: 356px;
