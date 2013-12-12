@@ -19,6 +19,27 @@ var Contact = {
             return false;
 
         }.bind(this));
+
+        this.name.addEventListener('keydown', function(e){
+            if(e.keyCode == 40){
+                this.email.focus();
+            }
+        }.bind(this));
+        this.email.addEventListener('keydown', function(e){
+            if(e.keyCode == 40){
+                this.message.focus();
+            }
+            if(e.keyCode == 38){
+                this.name.focus();
+            }
+        }.bind(this));
+        this.message.addEventListener('keydown', function(e){
+            if(e.keyCode == 38){
+                if(this.message.value.substr(0, this.message.selectionStart).split('\n').length == 1){
+                    this.email.focus();
+                }
+            }
+        }.bind(this));
     },
 
     submit: function(){

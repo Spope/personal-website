@@ -1,33 +1,33 @@
 #contact-form{
     width:400px;
-    height:300px;
+    /*height:300px;*/
     position:fixed;
     top:50%;
     left:50%;
     margin:-150px 0 0 -200px;
-    background:@white;
+    background:#111111;
 
     #pad{
         padding:20px;
     }
 
     input{
-        width:354px;
-        border:1px solid lightgray;
+        width:356px;
+        border:none;
         &#input-name{
             border-bottom:none;
         }
         &.error{
-            border-color:red;
+            background-color:#FED5D9;
         }
     }
     textarea{
-        width:354px;
-        border:1px solid lightgray;
+        width:356px;
+        border:none;
         height:150px;
         resize:none;
         &.error{
-            border-color:red;
+            background-color:#FED5D9;
         }
         border-top:none;
     }
