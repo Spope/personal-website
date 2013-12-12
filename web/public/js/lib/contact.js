@@ -28,10 +28,15 @@ var Contact = {
             method: 'post',
             body: 'name='+this.name.value+'&email='+this.email.value+'&message='+this.message.value,
             requestHeader: 'application/x-www-form-urlencoded',
-            error: function(text) {
-                this.name.className = 'error';
-                this.email.className = 'error';
-                this.message.className = 'error';
+            error: function(response) {
+                this.name.className = this.name.className.replace('error', '');
+                this.email.className = this.email.className.replace('error', '');
+                this.message.className = this.message.className.replace('error', '');
+
+                for(var i in response.errors){
+                    this[response.errors[i]].className = 'error';
+                }
+                
             }.bind(this),
             callback: function(response){
 

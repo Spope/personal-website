@@ -51,7 +51,21 @@ $app->post('/contact', function(Request $request) use ($app) {
     }else{
         if($request->isXmlHttpRequest()){
 
-            return $app->json(array('response'=>false), 400);
+            $errors = array();
+            if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+                array_push($errors, "email");
+            }
+            if($message == ""){
+                array_push($errors, "message");
+            }
+            if($name == ""){
+                array_push($errors, "name");
+            }
+
+            return $app->json(array(
+                'response'=>false,
+                'errors' => $errors
+            ), 400);
         }else{
 
             return $app['twig']->render('home.html.twig', array(
