@@ -407,42 +407,42 @@ lesshat-selector {
 @-webkit-keyframes positionF{ from{top:-800px;left:-800px;}to{top:0px;left:0px}}
 @-moz-keyframes positionF{ from{top:-800px;left:-800px;}to{top:0px;left:0px}}
 @-o-keyframes positionF{ from{top:-800px;left:-800px;}to{top:0px;left:0px}}
-@keyframes positionF{ from{top:-800pxleft:-800px}to{top:0pxleft:0px};
+@keyframes positionF{ from{top:-800px;left:-800px;}to{top:0px;left:0px};
 }
 lesshat-selector {
   -lh-property: 0; } 
 @-webkit-keyframes positionS{ from{top:-800px;left:1070px}to{top:0px;left:270px}}
 @-moz-keyframes positionS{ from{top:-800px;left:1070px}to{top:0px;left:270px}}
 @-o-keyframes positionS{ from{top:-800px;left:1070px}to{top:0px;left:270px}}
-@keyframes positionS{ from{top:-800pxleft:1070px}to{top:0pxleft:270px};
+@keyframes positionS{ from{top:-800px;left:1070px}to{top:0px;left:270px};
 }
 lesshat-selector {
   -lh-property: 0; } 
 @-webkit-keyframes positionT{ from{top:1070px;}to{top:270px;}}
 @-moz-keyframes positionT{ from{top:1070px;}to{top:270px;}}
 @-o-keyframes positionT{ from{top:1070px;}to{top:270px;}}
-@keyframes positionT{ from{top:1070px}to{top:270px};
+@keyframes positionT{ from{top:1070px;}to{top:270px;};
 }
 lesshat-selector {
   -lh-property: 0; } 
 @-webkit-keyframes slideF{ 0%, 100%{background-position:0px 0px;}25%{background-position:-1160px 0px;}50%{background-position:-1160px -520px;}75%{background-position:0px -520px;}}
 @-moz-keyframes slideF{ 0%, 100%{background-position:0px 0px;}25%{background-position:-1160px 0px;}50%{background-position:-1160px -520px;}75%{background-position:0px -520px;}}
 @-o-keyframes slideF{ 0%, 100%{background-position:0px 0px;}25%{background-position:-1160px 0px;}50%{background-position:-1160px -520px;}75%{background-position:0px -520px;}}
-@keyframes slideF{ 0%, 100%{background-position:0px 0px}25%{background-position:-1160px 0px}50%{background-position:-1160px -520px}75%{background-position:0px -520px};
+@keyframes slideF{ 0%, 100%{background-position:0px 0px;}25%{background-position:-1160px 0px;}50%{background-position:-1160px -520px;}75%{background-position:0px -520px;};
 }
 lesshat-selector {
   -lh-property: 0; } 
 @-webkit-keyframes slideS{ 0%, 100%{background-position:-270px 0px;}25%{background-position:-1430px 0px;}50%{background-position:-1430px -520px;}75%{background-position:-270px -520px;}}
 @-moz-keyframes slideS{ 0%, 100%{background-position:-270px 0px;}25%{background-position:-1430px 0px;}50%{background-position:-1430px -520px;}75%{background-position:-270px -520px;}}
 @-o-keyframes slideS{ 0%, 100%{background-position:-270px 0px;}25%{background-position:-1430px 0px;}50%{background-position:-1430px -520px;}75%{background-position:-270px -520px;}}
-@keyframes slideS{ 0%, 100%{background-position:-270px 0px}25%{background-position:-1430px 0px}50%{background-position:-1430px -520px}75%{background-position:-270px -520px};
+@keyframes slideS{ 0%, 100%{background-position:-270px 0px;}25%{background-position:-1430px 0px;}50%{background-position:-1430px -520px;}75%{background-position:-270px -520px;};
 }
 lesshat-selector {
   -lh-property: 0; } 
 @-webkit-keyframes slideT{ 0%, 100%{background-position:-135px -260px;}25%{background-position:-1295px -260px;}50%{background-position:-1295px -790px;}75%{background-position:-135px -790px;}}
 @-moz-keyframes slideT{ 0%, 100%{background-position:-135px -260px;}25%{background-position:-1295px -260px;}50%{background-position:-1295px -790px;}75%{background-position:-135px -790px;}}
 @-o-keyframes slideT{ 0%, 100%{background-position:-135px -260px;}25%{background-position:-1295px -260px;}50%{background-position:-1295px -790px;}75%{background-position:-135px -790px;}}
-@keyframes slideT{ 0%, 100%{background-position:-135px -260px}25%{background-position:-1295px -260px}50%{background-position:-1295px -790px}75%{background-position:-135px -790px};
+@keyframes slideT{ 0%, 100%{background-position:-135px -260px;}25%{background-position:-1295px -260px;}50%{background-position:-1295px -790px;}75%{background-position:-135px -790px;};
 }
 /*
 @keyframes slide1{
