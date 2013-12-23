@@ -5,9 +5,11 @@
             <div id="pad">
                 <div class="div-form-contact">
                     <form id="form-contact" method="post" action="{{ app.url_generator.generate('post_contact') }}" {% if contacted %} class="hidden" {% endif %}>
-                        <input type="text" id="input-name" name="name" placeholder="Nom" />
-                        <input type="email" id="input-email" name="email" placeholder="E-mail" />
-                        <textarea name="message" id="input-message" placeholder="Message"></textarea>
+                        <div id="form-background">
+                            <input type="text" id="input-name" name="name" placeholder="Nom" />
+                            <input type="email" id="input-email" name="email" placeholder="E-mail" />
+                            <textarea name="message" id="input-message" placeholder="Message"></textarea>
+                        </div>
                         <button type="submit">Envoyer</button>
                     </form>
                     <div id="thanks" {% if contacted == false %} class="hidden" {% endif %}>

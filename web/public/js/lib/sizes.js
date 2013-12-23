@@ -6,10 +6,10 @@ var Size = {
     contact: {},
 
     init: function(){
-        this.header = document.querySelector('#header'),
-        this.squares = document.querySelector('#squares'),
-        this.portfolio = document.querySelector('#portfolios'),
-        this.contact = document.querySelector('#contact'),
+        this.header = document.querySelector('#header');
+        this.squares = document.querySelector('#squares');
+        this.portfolio = document.querySelector('#portfolios');
+        this.contact = document.querySelector('#contact');
 
         window.onload = function(){
             this.resize();
