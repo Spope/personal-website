@@ -7,12 +7,14 @@
 }
 
 body{
-    font-size: 12px;
-    background-color: @lightgray;
+    font-size: 16px;
+    font-weight:400;
+    background-color: white;
     overflow-y: scroll;
     overflow-x: hidden;
     color: @black;
     width:100%;
+    -webkit-font-smoothing: antialiased;
 }
 
 ul {
@@ -28,12 +30,30 @@ ul {
 
 nav ul,nav ol { list-style:none }
 
-h1,h2,h3,h4,h5,h6,pre,code,kbd { font-size:1em; }
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Lato', arial, sans-serif;
+    font-size:1em;
+    font-weight:300;
+}
+pre,code,kbd { font-size:1em; }
 
 dl,ul,ol,li,
 h1,h2,h3,h4,h5,h6,pre,p,blockquote,
 form,fieldset,input,label
 { line-height: inherit;}
+
+h1 {
+    font-size:3em;
+}
+h2 {
+    font-size:2.5em;
+}
+h3 {
+    font-size:2em;
+}
+h3 {
+    font-size:1.5em;
+}
 
 
 abbr, img, object,
@@ -119,6 +139,12 @@ a, button{
     .transition(0.15s);
 }
 
+p {
+    line-height:26px;
+    margin-bottom:20px;
+    text-align:justify;
+}
+
 
 .pointer {
     cursor: pointer;
@@ -126,4 +152,8 @@ a, button{
 
 .hidden {
     display:none;
+}
+
+.center {
+    text-align:center;
 }

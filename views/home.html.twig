@@ -1,8 +1,23 @@
 {% extends 'layout.html.twig' %}
 
+{% block header %}
+    {% include 'header.html.twig' %}
+{% endblock %}
 
 {% block main_container %}
-    {% include 'squares.html.twig' %}
+    <section id="home">
+        <div class="content" id="home-content">
+            <p class="center">
+                <a href="http://twitter.com/spopila" alt="My twitter link"><i class="fa fa-twitter fa-lg"></i></a>
+                <a href="#"><i class="fa fa-envelope fa-lg"></i></a>
+                <a href="http://github.com/spope"><i class="fa fa-github fa-lg"></i></a>
+            </p>
+            <h3></h3>
+            <p>Passionné par le développement web, j'ai débuté en tant qu'indépendant dès l'acquisition de mon diplôme en 2011.</p>
+
+            <p>Dans un premier temps plus orienté backend avec php (prestashop, wordpress, symfony 2) j'ai été assez rapidement attiré par le dynamisme et l'évolution rapide des frameworks javascript, aussi bien client (AngularJS, BackboneJS) que serveur avec NodeJS.</p>
+        </div>
+    </section>
     {% include 'portfolio.html.twig' %}
-    {% include 'contact.html.twig' %}
+    {#% include 'contact.html.twig' %#}
 {% endblock %}

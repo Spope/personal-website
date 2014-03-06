@@ -1,16 +1,18 @@
 <section id="portfolios">
-    <div class="pad">
-        <h1>Portfolio</h1>
+    <div class="content">
+        <h2>Quelques réalisations</h2>
         <div id="portfolio-content">
 
         <ul>
         {% for portfolio in portfolios %}
             <li class="portfolio">
-                <h2>{{ portfolio['title']|e }}</h2>
-                <div class="preview"><img src="{{ app.request.basepath }}/public/img/portfolio/{{ portfolio['img'] }}" alt="" width="230" /></div>
+                {# <h3>{{ portfolio['title']|e }}</h3>#}
+                <div class="preview preview-{% if loop.index is odd %}left{% else %}right{% endif %}"><img src="{{ app.request.basepath }}/public/img/portfolio/{{ portfolio['img'] }}" alt="" width="370" /></div>
+                {#
                 <div class="description">
                     {{ portfolio['description'] }}
                 </div>
+                #}
             </li>
         {% endfor %}
         </ul>
