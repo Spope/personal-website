@@ -33,7 +33,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Lato', arial, sans-serif;
+  font-family: 'Open Sans', arial, sans-serif;
   font-size: 1em;
   font-weight: 300;
 }
@@ -130,7 +130,7 @@ hr {
   display: block;
   border: none;
   height: 1px;
-  background: #ffffff url("../img/dots.gif") top left repeat-x;
+  background: #404040;
 }
 input[type="text"],
 input[type="password"],
@@ -148,13 +148,13 @@ button {
   -o-transition: 0.1s;
   transition: 0.1s;
   padding: 7px;
-  background: #707070;
+  background: #202020;
   border: 0;
   color: white;
   cursor: pointer;
 }
 button:hover {
-  background-color: #434343;
+  background-color: #232323;
 }
 a,
 button {
@@ -167,6 +167,9 @@ p {
   line-height: 26px;
   margin-bottom: 20px;
   text-align: justify;
+}
+.lato {
+  font-family: 'Lato', arial, sans-serif;
 }
 .pointer {
   cursor: pointer;
@@ -196,26 +199,22 @@ body {
 }
 section {
   display: block;
+  margin: 0 0 80px 0;
   width: 100%;
 }
-section > .pad {
-  padding: 20px;
-}
-section > .pad > h1 {
-  font-size: 3em;
-  font-weight: normal;
-}
-#contact {
-  top: 200%;
-  z-index: 1;
+section h2 {
+  text-align: center;
+  margin-bottom: 50px;
 }
 #footer {
   width: 100%;
   height: 100px;
   text-align: center;
+  background: #202020;
 }
 #header-home {
   background: url('../img/header-bg.png') no-repeat 50% 0 #202020;
+  margin: 0;
 }
 #header-home-content {
   height: 550px;
@@ -227,6 +226,8 @@ section > .pad > h1 {
   color: #fbf9f3;
   text-align: center;
   letter-spacing: 14px;
+  margin: 0;
+  line-height: 85px;
 }
 #header-home-content h2 {
   font-size: 20px;
@@ -234,6 +235,8 @@ section > .pad > h1 {
   text-align: center;
   padding-top: 190px;
   letter-spacing: 14px;
+  margin: 0;
+  line-height: 30px;
 }
 #header-home-content img {
   position: absolute;
@@ -247,18 +250,36 @@ section > .pad > h1 {
   -moz-background-clip: padding;
   border-radius: 156px;
   background-clip: padding-box;
-  -webkit-box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.5);
-  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+}
+#home {
+  -webkit-box-shadow: 0px -25px 25px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px -25px 25px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px -25px 25px rgba(0, 0, 0, 0.3);
 }
 #home #home-content {
-  padding-top: 50px;
+  padding-top: 30px;
+}
+#home #hr-home {
+  margin: 30px 40px 20px 40px;
+}
+#home .social {
+  margin-top: -35px;
+}
+#home .social span {
+  padding: 0 10px 0 10px;
+  background: white;
 }
 #portfolios {
   /*background:@darkgray;*/
 }
 #portfolio-content {
   padding-top: 50px;
+}
+#portfolio-content .warn {
+  margin-bottom: 40px;
 }
 #portfolio-content ul {
   text-align: center;
@@ -303,4 +324,90 @@ section > .pad > h1 {
   -ms-transform: rotateY(-25deg);
   transform: rotateY(-25deg);
 }
-/*@import "contact.less";*/
+#cv .content > h3 {
+  color: #ff7300;
+  margin-bottom: 20px;
+}
+.date {
+  float: left;
+  margin-right: 20px;
+  padding-top: 5px;
+  text-align: right;
+  font-size: 0.8em;
+  width: 100px;
+}
+.cv-desc {
+  float: left;
+  width: 640px;
+  margin-bottom: 40px;
+}
+.cv-desc h3 {
+  float: left;
+  margin-bottom: 10px;
+}
+.cv-desc h3.type {
+  font-style: italic;
+  color: #959595;
+}
+.cv-desc h3.type::before {
+  margin: 0 10px 0 10px;
+  content: "-";
+}
+#contact {
+  background: #202020;
+  margin-bottom: 0;
+  padding-bottom: 100px;
+}
+#contact h2 {
+  color: #fbf9f3;
+  padding-top: 50px;
+}
+#contact-form {
+  width: 400px;
+  margin: 0 auto;
+  background: #111111;
+  -webkit-box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.4);
+}
+#contact-form #pad {
+  padding: 20px;
+}
+#contact-form .div-form-contact {
+  -webkit-box-shadow: 0px 0px 7px #000000;
+  -moz-box-shadow: 0px 0px 7px #000000;
+  box-shadow: 0px 0px 7px #000000;
+}
+#contact-form #form-background {
+  background: white;
+}
+#contact-form input {
+  width: 356px;
+  border: none;
+}
+#contact-form input#input-name {
+  border-bottom: none;
+}
+#contact-form input.error {
+  background-color: #FED5D9;
+}
+#contact-form textarea {
+  width: 356px;
+  border: none;
+  height: 150px;
+  resize: none;
+  border-top: none;
+}
+#contact-form textarea.error {
+  background-color: #FED5D9;
+}
+#contact-form button {
+  width: 362px;
+}
+#contact-form #thanks {
+  background: #fbf9f3;
+}
+#contact-form #thanks h3 {
+  font-size: 2em;
+  text-align: center;
+}

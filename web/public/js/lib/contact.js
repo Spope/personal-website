@@ -3,7 +3,7 @@ var Contact = {
     name: {},
     email: {},
     message: {},
-    postUrl : '',
+    postUrl: '',
 
     init: function(){
 
@@ -66,7 +66,7 @@ var Contact = {
                     document.querySelector('#thanks').style.display = 'block';
                 }
             }
-        }
+        };
 
         this.xhr(options);
     },
@@ -97,4 +97,4 @@ var Contact = {
         xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
         xhr.send(options.body);
     }
-}
+};

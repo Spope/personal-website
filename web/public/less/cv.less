@@ -1,0 +1,35 @@
+#cv {
+    .content > h3 {
+
+        color:@orange;
+        margin-bottom:20px;
+    }
+}
+
+.date {
+    float:left;
+    margin-right:20px;
+    padding-top:5px;
+    text-align:right;
+    font-size: 0.8em;
+    width: 100px;
+}
+
+.cv-desc {
+    float: left;
+    width: 640px;
+    margin-bottom:40px;
+
+    h3 {
+        float: left;
+        margin-bottom:10px;
+    }
+    h3.type {
+        font-style:italic;
+        color:@lightgray;
+    }
+    h3.type::before {
+        margin: 0 10px 0 10px;
+        content: "-";
+    }
+}

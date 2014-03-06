@@ -1,6 +1,6 @@
 * {
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
     font-family: 'Open Sans', arial, sans-serif;
 
     outline: none !important;
@@ -8,12 +8,12 @@
 
 body{
     font-size: 16px;
-    font-weight:400;
+    font-weight: 400;
     background-color: white;
     overflow-y: scroll;
     overflow-x: hidden;
     color: @black;
-    width:100%;
+    width: 100%;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -21,21 +21,19 @@ ul {
     list-style: none;
 }
 
-
-
 :link,:visited,ins {
     color: inherit;
-    text-decoration:none
+    text-decoration: none
 }
 
-nav ul,nav ol { list-style:none }
+nav ul,nav ol { list-style: none }
 
 h1,h2,h3,h4,h5,h6 {
-    font-family: 'Lato', arial, sans-serif;
-    font-size:1em;
-    font-weight:300;
+    font-family: 'Open Sans', arial, sans-serif;
+    font-size: 1em;
+    font-weight: 300;
 }
-pre,code,kbd { font-size:1em; }
+pre,code,kbd { font-size: 1em; }
 
 dl,ul,ol,li,
 h1,h2,h3,h4,h5,h6,pre,p,blockquote,
@@ -112,7 +110,7 @@ hr{
     display: block;
     border:none;
     height: 1px;
-    background: white url("../img/dots.gif") top left repeat-x;
+    background: @black;
 }
 
 input[type="text"], input[type="password"], input[type="email"], textarea{
@@ -126,12 +124,12 @@ input[type="text"], input[type="password"], input[type="email"], textarea{
 button{
     .transition(0.1s);
     padding: 7px;
-    background:@lightgray;
+    background:@darkgray;
     border: 0;
     color: white;
     cursor: pointer;
     &:hover{
-        background-color: lighten(@black, 1%);
+        background-color: lighten(@darkgray, 1%);
     }
 }
 
@@ -145,6 +143,10 @@ p {
     text-align:justify;
 }
 
+
+.lato {
+    font-family: 'Lato', arial, sans-serif;
+}
 
 .pointer {
     cursor: pointer;

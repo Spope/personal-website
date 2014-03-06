@@ -3,20 +3,21 @@
         <h2>Quelques réalisations</h2>
         <div id="portfolio-content">
 
-        <ul>
-        {% for portfolio in portfolios %}
-            <li class="portfolio">
-                {# <h3>{{ portfolio['title']|e }}</h3>#}
-                <div class="preview preview-{% if loop.index is odd %}left{% else %}right{% endif %}"><img src="{{ app.request.basepath }}/public/img/portfolio/{{ portfolio['img'] }}" alt="" width="370" /></div>
-                {#
-                <div class="description">
-                    {{ portfolio['description'] }}
-                </div>
-                #}
-            </li>
-        {% endfor %}
-        </ul>
-        <div class="clr"></div>
+            <p class="warn">Pour l'ensemble de ces exemples, mon travail n'a été que le développement et l'intégration des sites.</p>
+            <ul>
+                {% for portfolio in portfolios %}
+                    <li class="portfolio">
+                        {# <h3>{{ portfolio['title']|e }}</h3>#}
+                        <div class="preview preview-{% if loop.index is odd %}left{% else %}right{% endif %}"><img src="{{ app.request.basepath }}/public/img/portfolio/{{ portfolio['img'] }}" alt="" width="370" /></div>
+                        {#
+                        <div class="description">
+                            {{ portfolio['description'] }}
+                        </div>
+                        #}
+                    </li>
+                {% endfor %}
+            </ul>
+            <div class="clr"></div>
         </div>
     </div>
 </section>
