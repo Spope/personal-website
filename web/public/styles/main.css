@@ -272,6 +272,21 @@ section h2 {
   padding: 0 10px 0 10px;
   background: white;
 }
+#home .p-left {
+  float: left;
+  width: 590px;
+  direction: rtl;
+}
+#home .logo {
+  float: left;
+  margin: 0 20px 20px 0;
+  height: 150px;
+}
+#home .logo-right {
+  float: right;
+  margin: 0 0 20px 20px;
+  height: 150px;
+}
 #portfolios {
   /*background:@darkgray;*/
 }
