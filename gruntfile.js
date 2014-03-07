@@ -34,7 +34,7 @@ module.exports = function(grunt) {
             },
             my_target: {
                 files: {
-                    'web/public/js/build/main.min.js': ['web/public/js/lib/squares.js', 'web/public/js/lib/sizes.js', 'web/public/js/lib/contact.js', 'web/public/js/lib/init.js'],
+                    'web/public/js/build/main.min.js': ['web/public/js/lib/scroll.js','web/public/js/lib/contact.js', 'web/public/js/lib/init.js'],
                 }
             }
         }
