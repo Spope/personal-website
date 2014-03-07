@@ -7,13 +7,15 @@
             <ul>
                 {% for portfolio in portfolios %}
                     <li class="portfolio">
-                        {# <h3>{{ portfolio['title']|e }}</h3>#}
+                        
                         <div class="preview preview-{% if loop.index is odd %}left{% else %}right{% endif %}"><img src="{{ app.request.basepath }}/public/img/portfolio/{{ portfolio['img'] }}" alt="" width="370" /></div>
-                        {#
-                        <div class="description">
-                            {{ portfolio['description'] }}
+
+                        <div class="description description-{% if loop.index is odd %}left{% else %}right{% endif %}">
+                            <div class="pad">
+                                <h3>{{ portfolio['title']|e }}</h3>
+                                {{ portfolio['description']|raw }}
+                            </div>
                         </div>
-                        #}
                     </li>
                 {% endfor %}
             </ul>

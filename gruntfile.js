@@ -5,6 +5,8 @@ module.exports = function(grunt) {
             development: {
                 options: {
                     //paths: ["../client/public/less"]
+                    compress: true,
+                    cleancss: true
                 },
                 files: {
                     "web/public/styles/main.css" : "web/public/less/main.less"
@@ -43,6 +45,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
 
     grunt.registerTask('default', ['less', 'watch']);
-    grunt.registerTask('compile', ['uglify']);
+    grunt.registerTask('compile', ['less', 'uglify']);
     
 };

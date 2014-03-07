@@ -82,7 +82,7 @@ $app->post('/contact', function(Request $request) use ($app) {
 function getPortfolios($app){
 
     $db = $app['db'];
-    $sql = "SELECT * FROM portfolio ORDER BY date DESC";
+    $sql = "SELECT * FROM portfolio WHERE private = 0 ORDER BY date DESC";
 
     return $app['db']->fetchAll($sql);
 }
