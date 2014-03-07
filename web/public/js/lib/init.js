@@ -1,1 +1,2 @@
 Contact.init();
+Scroll.init();
