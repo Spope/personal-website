@@ -3,11 +3,15 @@
   "description": "Personal website",
   "version": "0.0.1",
   "dependencies": {
-    "less"                            : "*",
-    "grunt"                           : "*",
-    "grunt-cli"                       : "*",
-    "grunt-contrib-watch"             : "~0.5.3",
-    "grunt-contrib-less"              : "*",
-    "grunt-contrib-uglify"            : "*"
+    "less": "*",
+    "grunt": "*",
+    "grunt-cli": "*",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-less": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-responsive-images": "~0.1.1"
+  },
+  "devDependencies": {
+    
   }
 }

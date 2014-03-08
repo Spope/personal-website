@@ -8,7 +8,10 @@
                 {% for portfolio in portfolios %}
                     <li class="portfolio">
                         
-                        <div class="preview preview-{% if loop.index is odd %}left{% else %}right{% endif %}"><img src="{{ app.request.basepath }}/public/img/portfolio/{{ portfolio['img'] }}" alt="" width="370" /></div>
+                        <div class="preview preview-{% if loop.index is odd %}left{% else %}right{% endif %}">
+                            {#<img src="{{ app.request.basepath }}/public/img/portfolio/{{ portfolio['img'] }}" alt="" width="370" />#}
+                            <div class="delayed-image-load" data-src="{{ app.request.basepath }}/public/img/portfolio/min/{{ portfolio['img'] }}-{width}{pixel_ratio}.png" data-alt="{{ portfolio['title']|e }}"></div>
+                        </div>
 
                         <div class="description description-{% if loop.index is odd %}left{% else %}right{% endif %}">
                             <div class="pad">

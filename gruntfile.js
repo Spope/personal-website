@@ -37,14 +37,40 @@ module.exports = function(grunt) {
                     'web/public/js/build/main.min.js': ['web/public/js/lib/scroll.js','web/public/js/lib/contact.js', 'web/public/js/lib/init.js'],
                 }
             }
-        }
+        },
+        responsive_images: {
+            imageMin: {
+                options: {
+                    engine: "im",
+                    sizes: [{
+                        name: "370",
+                        width: 370
+                    },{
+                        name: "370",
+                        width: 481,
+                        suffix: "-1.3x"
+                    },{
+                        name: "370",
+                        width: 740,
+                        suffix: "-2x"
+                    }]
+                },
+                files: [{
+                    expand: true,
+                    src: ['*.png'],
+                    dest: 'web/public/img/portfolio/min/',
+                    cwd: 'web/public/img/portfolio/'
+                }]
+            }
+        },
     });
 
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-responsive-images');
 
     grunt.registerTask('default', ['less', 'watch']);
-    grunt.registerTask('compile', ['less', 'uglify']);
+    grunt.registerTask('compile', ['less', 'uglify', 'responsive_images']);
     
 };
