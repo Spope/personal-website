@@ -34,7 +34,7 @@ module.exports = function(grunt) {
             },
             my_target: {
                 files: {
-                    'web/public/js/build/main.min.js': ['web/public/js/lib/scroll.js','web/public/js/lib/contact.js', 'web/public/js/lib/init.js'],
+                    'web/public/js/build/main.min.js': ['web/public/js/bower_components/imager.js/Imager.js', 'web/public/js/lib/scroll.js','web/public/js/lib/contact.js', 'web/public/js/lib/init.js'],
                 }
             }
         },
@@ -60,6 +60,29 @@ module.exports = function(grunt) {
                     src: ['me.png'],
                     dest: 'web/public/img/me/',
                     cwd: 'web/public/img/'
+                }]
+            },
+            logo: {
+                options: {
+                    engine: "im",
+                    sizes: [{
+                        name: "150",
+                        width: 150
+                    },{
+                        name: "150",
+                        width: 195,
+                        suffix: "-1.3x"
+                    },{
+                        name: "150",
+                        width: 300,
+                        suffix: "-2x"
+                    }]
+                },
+                files: [{
+                    expand: true,
+                    src: ['*.png'],
+                    dest: 'web/public/img/logo/min/',
+                    cwd: 'web/public/img/logo/'
                 }]
             },
             portfolio: {
