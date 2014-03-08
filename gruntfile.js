@@ -39,7 +39,30 @@ module.exports = function(grunt) {
             }
         },
         responsive_images: {
-            imageMin: {
+            me: {
+                options: {
+                    engine: "im",
+                    sizes: [{
+                        name: "156",
+                        width: 156
+                    },{
+                        name: "156",
+                        width: 209,
+                        suffix: "-1.3x"
+                    },{
+                        name: "156",
+                        width: 312,
+                        suffix: "-2x"
+                    }]
+                },
+                files: [{
+                    expand: true,
+                    src: ['me.png'],
+                    dest: 'web/public/img/me/',
+                    cwd: 'web/public/img/'
+                }]
+            },
+            portfolio: {
                 options: {
                     engine: "im",
                     sizes: [{
