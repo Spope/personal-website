@@ -6,13 +6,14 @@
             <p class="warn">Pour l'ensemble de ces exemples, mon travail n'a été que le développement et l'intégration des sites.</p>
             <ul>
                 {% for portfolio in portfolios %}
-                    <li class="portfolio">
+                    <li class="portfolio portfolio-{% if loop.index is odd %}left{% else %}right{% endif %}">
                         
                         <div class="preview preview-{% if loop.index is odd %}left{% else %}right{% endif %}">
-                            <div class="delayed-image-portfolio" data-src="{{ app.request.basepath }}/public/img/portfolio/min/{{ portfolio['img'] }}-{width}{pixel_ratio}.png" data-alt="{{ portfolio['title']|e }}"></div>
+                            <div class="delayed-image-portfolio" data-src="{{ app.request.basepath }}/public/img/portfolio/min/{{ portfolio['img'] }}-{width}{pixel_ratio}.png" data-alt="{{ portfolio['title']|e }}" data-width="360"></div>
                         </div>
 
                         <div class="description description-{% if loop.index is odd %}left{% else %}right{% endif %}">
+                            <div class="triangle"></div>
                             <div class="pad">
                                 <h3>{{ portfolio['title']|e }}</h3>
                                 {{ portfolio['description']|raw }}
@@ -24,4 +25,5 @@
             <div class="clr"></div>
         </div>
     </div>
+
 </section>

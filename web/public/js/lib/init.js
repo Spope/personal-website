@@ -12,6 +12,6 @@ new Imager('.delayed-image-me', {
 });
 
 new Imager('.delayed-image-portfolio', {
-    availableWidths: [370],
+    availableWidths: [360],
     availablePixelRatios: [1, 1.3, 2]
 });

@@ -89,14 +89,14 @@ module.exports = function(grunt) {
                 options: {
                     engine: "im",
                     sizes: [{
-                        name: "370",
-                        width: 370
+                        name: "360",
+                        width: 360,
                     },{
-                        name: "370",
+                        name: "360",
                         width: 481,
                         suffix: "-1.3x"
                     },{
-                        name: "370",
+                        name: "360",
                         width: 740,
                         suffix: "-2x"
                     }]

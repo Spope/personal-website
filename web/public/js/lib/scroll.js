@@ -7,11 +7,13 @@ var Scroll = {
     },
 
     scrollParallax: function() {
-        window.addEventListener('scroll', function(e) {
-            var doc = document.documentElement, body = document.body;
-            var top = (doc && doc.scrollTop  || body && body.scrollTop  || 0);
-            document.querySelector('#header-home').style.backgroundPosition = "50% "+top/2+"px";
-        });
+
+        window.onscroll = function() {
+            var posY = (document.documentElement.scrollTop) ? document.documentElement.scrollTop : window.pageYOffset;
+            
+            var ground = document.getElementById('header-home');
+            ground.style.backgroundPosition = "50% " + (-posY/2) + "px"; 
+        };
     },
 
     checkBrowser: function() {
