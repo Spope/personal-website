@@ -9,7 +9,13 @@
                     <li class="portfolio portfolio-{% if loop.index is odd %}left{% else %}right{% endif %}">
                         
                         <div class="preview preview-{% if loop.index is odd %}left{% else %}right{% endif %}">
+                            {% if portfolio.url %}
+                                <a href="{{ portfolio.url }}" title="{{ portfolio.title }}">
+                            {% endif %}
                             <div class="delayed-image-portfolio" data-src="{{ app.request.basepath }}/public/img/portfolio/min/{{ portfolio['img'] }}-{width}{pixel_ratio}.png" data-alt="{{ portfolio['title']|e }}" data-width="360"></div>
+                            {% if portfolio.url %}
+                                </a>
+                            {% endif %}
                         </div>
 
                         <div class="description description-{% if loop.index is odd %}left{% else %}right{% endif %}">
