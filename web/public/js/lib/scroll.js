@@ -10,9 +10,11 @@ var Scroll = {
 
         var ground = document.getElementById('header-home');
         window.onscroll = function() {
+
             var posY = (document.documentElement.scrollTop) ? document.documentElement.scrollTop : window.pageYOffset;
-            
-            ground.style.backgroundPosition = "50% " + (-posY/2) + "px"; 
+            if(posY < 550) {
+                ground.style.backgroundPosition = "50% " + (-posY/2) + "px"; 
+            }
         };
     },
 
