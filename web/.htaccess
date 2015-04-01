@@ -1,5 +1,10 @@
+<IfModule mod_rewrite.c>
+    Options -MultiViews
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [QSA,L]
+</IfModule>
 # Block Russian Referrer Spam
-RewriteEngine on
 RewriteCond %{HTTP_REFERER} ^http://.*ilovevitaly\.com/ [NC,OR]
 RewriteCond %{HTTP_REFERER} ^http://.*ilovevitaly.\.ru/ [NC,OR]
 RewriteCond %{HTTP_REFERER} ^http://.*ilovevitaly\.org/ [NC,OR]
