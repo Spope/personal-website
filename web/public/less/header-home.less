@@ -1,7 +1,31 @@
 #header-home{
-    background: url('../img/header-bg.png') no-repeat 50% 0 @darkgray;
-    background-attachment: fixed;
     margin: 0;
+    position: relative;
+
+    img {
+        width: 156px;
+        height: 156px;
+        position: absolute;
+        left: 50%;
+        margin-left: -80px;
+        bottom: -30px;
+        border: 5px solid @beige;
+        .border-radius(156px);
+        .box-shadow(0, 3px, 6px, rgba(0, 0, 0, 0.3));
+    }
+}
+
+#header-mask {
+    position: relative;
+    overflow: hidden;
+}
+
+#header-home-background{
+    background: url('../img/header-bg.png') no-repeat 50% 0 @darkgray;
+    position: absolute;
+    height: 550px;
+    width: 100%;
+    z-index: 0;
 }
 
 #header-home-content {
@@ -26,17 +50,5 @@
         letter-spacing: 14px;
         margin:0;
         line-height:30px;
-    }
-
-    img {
-        width: 156px;
-        height: 156px;
-        position: absolute;
-        left: 50%;
-        margin-left: -80px;
-        bottom: -30px;
-        border: 5px solid @beige;
-        .border-radius(156px);
-        .box-shadow(0, 3px, 6px, rgba(0, 0, 0, 0.3));
     }
 }
