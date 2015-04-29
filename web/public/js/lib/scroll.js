@@ -4,8 +4,8 @@ var Scroll = {
     _transform: null,
 
     init: function() {
-        if(!this.checkBrowser()) {
-            this._transform = this.getSupportedTransform();
+        this._transform = this.checkBrowser();
+        if(this._transform) {
             this._ground = document.getElementById('header-home-background');
             window.requestAnimationFrame(this.scrollParallax.bind(this));
         }
@@ -22,22 +22,6 @@ var Scroll = {
     },
 
     checkBrowser: function() {
-        //|| navigator.userAgent.match(/Android/i)
-        //|| navigator.userAgent.match(/iPad/i)
-        //|| navigator.userAgent.match(/iPhone/i)
-        //|| navigator.userAgent.match(/iPod/i)
-        if(navigator.userAgent.match(/webOS/i)
-           || navigator.userAgent.match(/BlackBerry/i)
-           || navigator.userAgent.match(/Windows Phone/i)
-        ){
-            return true;
-        }
-        else {
-            return false;
-        }
-    },
-
-    getSupportedTransform: function() {
         var prefixes = 'transform WebkitTransform MozTransform OTransform msTransform'.split(' ');
         var div = document.createElement('div');
         for(var i = 0; i < prefixes.length; i++) {
@@ -46,5 +30,5 @@ var Scroll = {
             }
         }
         return false;
-    }
+    },
 }
