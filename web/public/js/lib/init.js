@@ -1,6 +1,5 @@
 Contact.init();
 Scroll.init();
-window.sr = new scrollReveal();
 
 new Imager('.delayed-image-logo', {
     availableWidths: [150],

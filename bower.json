@@ -2,7 +2,6 @@
   "name": "Azimuth",
   "version": "0.0.1",
   "dependencies": {
-    "imager.js": "~0.2.0",
-    "scrollReveal.js": "2.3.*"
+    "imager.js": "~0.2.0"
   }
 }

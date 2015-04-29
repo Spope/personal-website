@@ -8,7 +8,7 @@
                 {% for portfolio in portfolios %}
                     <li class="portfolio portfolio-{% if loop.index is odd %}left{% else %}right{% endif %}">
                         
-                        <div data-sr='enter bottom' class="preview preview-{% if loop.index is odd %}left{% else %}right{% endif %}">
+                        <div class="preview preview-{% if loop.index is odd %}left{% else %}right{% endif %}">
                             {% if portfolio.url %}
                                 <a href="{{ portfolio.url }}" title="{{ portfolio.title }}">
                             {% endif %}
