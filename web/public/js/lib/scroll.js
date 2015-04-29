@@ -32,11 +32,11 @@ var Scroll = {
         }
 
         //Check requestAnimationFrame method
-        this._animationFrame = window.requestanimationframe ||
-        window.mozrequestanimationframe ||
-        window.webkitrequestanimationframe ||
+        this._animationFrame = window.requestAnimationFrame ||
+        window.mozRequestAnimationFrame ||
+        window.webkitRequestAnimationFrame ||
         function (callback) {
-            window.settimeout(callback, 1000 / 60);
+            window.setTimeout(callback, 1000 / 60);
         };
 
         return this._transform != null;
