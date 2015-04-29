@@ -2,10 +2,10 @@ var Scroll = {
 
     _ground: null,
     _transform: null,
+    _animationFrame: null,
 
     init: function() {
-        this._transform = this.checkBrowser();
-        if(this._transform) {
+        if(this.checkBrowser()) {
             this._ground = document.getElementById('header-home-background');
             window.requestAnimationFrame(this.scrollParallax.bind(this));
         }
@@ -22,13 +22,23 @@ var Scroll = {
     },
 
     checkBrowser: function() {
+        //Check transform method
         var prefixes = 'transform WebkitTransform MozTransform OTransform msTransform'.split(' ');
         var div = document.createElement('div');
         for(var i = 0; i < prefixes.length; i++) {
             if(div && div.style[prefixes[i]] !== undefined) {
-                return prefixes[i];
+                this._transform = prefixes[i];
             }
         }
-        return false;
-    },
+
+        //Check requestAnimationFrame method
+        this._animationFrame = window.requestanimationframe ||
+        window.mozrequestanimationframe ||
+        window.webkitrequestanimationframe ||
+        function (callback) {
+            window.settimeout(callback, 1000 / 60);
+        };
+
+        return this._transform != null;
+    }
 }
