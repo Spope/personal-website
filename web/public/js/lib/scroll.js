@@ -14,7 +14,7 @@ var Scroll = {
             var posY = (document.documentElement.scrollTop) ? document.documentElement.scrollTop : window.pageYOffset;
             if(posY < 550) {
                 //ground.style.backgroundPosition = "50% " + (-posY/2) + "px"; 
-                ground.style.webkitTransform = 'translate3d(' + 0 + 'px, ' + (posY / 3) + 'px,0)';
+                ground.style.transform = 'translate3d(' + 0 + 'px, ' + (posY / 3) + 'px,0)';
             }
         };
     },
