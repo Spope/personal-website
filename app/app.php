@@ -33,14 +33,14 @@ $app->post('/contact', function(Request $request) use ($app) {
         $db = $app['db'];
         $db->insert('contact', $contact);
 
-        if(!$app['debug']){
+        //if(!$app['debug']){
             $mail = utf8_decode('Nom : '.$name.'<br />E-mail : '.$email.'<br /><br />'.$message);
             mail('pinaudt@gmail.com', 'Spope contact', $mail, 'Content-type: text/html; charset=utf-8');
-        }
+        //}
 
         if($request->isXmlHttpRequest()){
 
-            return $app->json(array('response'=>true), 201);
+            return $app->json(array('response'=>$app['debug']), 201);
         }else{
 
             return $app['twig']->render('home.html.twig', array(
